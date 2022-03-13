@@ -25,5 +25,9 @@ namespace Pizzeria
         {
             return "ура, пицца в коробке";
         }
+        public string display()
+        {
+            return $"{description()} {prepare()} {bake()} {cut()} {box()}";
+        }
     }
 }

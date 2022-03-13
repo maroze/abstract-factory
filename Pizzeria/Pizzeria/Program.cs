@@ -16,7 +16,7 @@ namespace Pizzeria
             string [] piz = new string[] { "Cheese", "Pepperoni", "Clam", "Veggie" };
             foreach (string i in piz)
             {                
-                Console.WriteLine($"{pizza.orderPizza(i).description()}\n");
+                Console.WriteLine($"{pizza.orderPizza(i).display()}\n");
             }
 
             Console.ReadKey();

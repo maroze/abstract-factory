@@ -10,7 +10,7 @@ namespace Pizzeria
     {
         public override string description()
         {
-            return $"{"Вегетарианская пицца"} {prepare()} {bake()} {cut()} {box()}";
+            return $"{"Вегетарианская пицца"}";
         }
     }
 }

@@ -17,6 +17,12 @@ namespace Pizzeria
         {
             Pizza pizza;
             pizza = factory.CreatePizza(pizzatype);
+
+            pizza.prepare();
+            pizza.bake();
+            pizza.cut();
+            pizza.box();
+
             return pizza;
         }
     }
