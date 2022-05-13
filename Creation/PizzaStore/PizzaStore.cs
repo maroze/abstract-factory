@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace Pizzeria
 {
-    public class PizzaStore
+    public abstract class PizzaStore
     {
-        SimplePizzaFactory factory;
-        public PizzaStore(SimplePizzaFactory factory)
-        {
-            this.factory = factory;
-        }
         public Pizza orderPizza(string pizzatype)
         {
             Pizza pizza;
-            pizza = factory.CreatePizza(pizzatype);
+            pizza = CreatePizza(pizzatype);
 
             pizza.prepare();
             pizza.bake();
@@ -25,5 +20,6 @@ namespace Pizzeria
 
             return pizza;
         }
+        public abstract Pizza CreatePizza(string pizzatype);
     }
 }

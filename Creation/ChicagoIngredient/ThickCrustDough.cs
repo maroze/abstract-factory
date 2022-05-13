@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Pizzeria
 {
-    class CheesePizza : Pizza
+    public class ThickCrustDough : Dough
     {
-        public override string description()
-        {
-            return $"{"Пицца с сыром"}";
-        }
+        public string Name { get { return "Толстое тесто"; } }
     }
 }

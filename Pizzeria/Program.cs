@@ -10,14 +10,14 @@ namespace Pizzeria
     {
         static void Main(string[] args)
         {
-            SimplePizzaFactory factory = new SimplePizzaFactory();
-            PizzaStore pizza = new PizzaStore(factory);
+            PizzaStore nyStore = new NYStylePizzaStore();
+            PizzaStore chicagoStore = new ChicagoStylePizzaStore();
 
-            string [] piz = new string[] { "Cheese", "Pepperoni", "Clam", "Veggie" };
-            foreach (string i in piz)
-            {                
-                Console.WriteLine($"{pizza.orderPizza(i).display()}\n");
-            }
+            Pizza pizza = nyStore.orderPizza("Cheese");
+            Console.WriteLine("Итан заказал:" + pizza.display()+"\n");
+
+            pizza = chicagoStore.orderPizza("Cheese");
+            Console.WriteLine("Джоэл заказал:"  + pizza.display()+ "\n");
 
             Console.ReadKey();
         }
